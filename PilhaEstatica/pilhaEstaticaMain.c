@@ -15,14 +15,13 @@ void listaPilha(tipoPilha p);
 int menuOpcao(){
     int op;
 
-    printf("\n\nMenu de Opcoes");
-    printf("\n<1> Criar Pilha");
-    printf("\n<2> Empilhar");
-    printf("\n<3> Desempilhar");
-    printf("\n<4> Mostar Topo");
-    printf("\n<5> Listar Pilha");
-    printf("\n<6> Sair");
-    printf("\n\nEscolha a opcao: ");
+    printf("\n\nMENU");
+    printf("\n<1> Empilhar");
+    printf("\n<2> Desempilhar");
+    printf("\n<3> Mostar Topo");
+    printf("\n<4> Listar Pilha");
+    printf("\n<5> Sair");
+    printf("\n\nSelecione uma opcao: ");
     scanf("%d", &op);
 
     system("cls");
@@ -34,9 +33,6 @@ void trataOpcao(int op){
 
     switch(op){
         case 1:
-            criaPilha(&PILHA);
-            break;
-        case 2:
             if(pilhaCheia(PILHA))
                 printf("\nPilha Cheia! Dado nao inserido!\n");
             else{
@@ -45,7 +41,7 @@ void trataOpcao(int op){
                 empilha(&PILHA, dado);
             }
             break;
-        case 3:
+        case 2:
             if(pilhaVazia(PILHA))
                 printf("\nPilha Vazia! Dado nao removido!\n");
             else{
@@ -53,13 +49,13 @@ void trataOpcao(int op){
                 printf("\nDado Desempilhado: %d", dado);
             }
             break;
-        case 4:
+        case 3:
             if(pilhaVazia(PILHA))
                 printf("\nPilha Vazia! Topo nao pode ser mostrado\n");
             else
                 printf("\nTopo: %d", topoPilha(PILHA));
             break;
-        case 5:
+        case 4:
             listaPilha(PILHA);
             break;
 
@@ -88,6 +84,8 @@ void listaPilha(tipoPilha p){
 int main(void){
     int opcao;
 
+    criaPilha(&PILHA);
+
     printf("--------------------------\n");
     printf("APLICACAO DE MANIPULACAO DE PILHA\n");
     printf("--------------------------\n");
@@ -95,5 +93,5 @@ int main(void){
     do{
         opcao = menuOpcao();
         trataOpcao(opcao);
-    }while(opcao != 6);
+    }while(opcao != 5);
 }
