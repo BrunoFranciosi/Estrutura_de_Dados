@@ -15,7 +15,7 @@ void listaPilha(tipoPilha p);
 int menuOpcao(){
     int op;
 
-    printf("\n\nMENU");
+    printf("\n\nMENU DE OPCOES");
     printf("\n<1> Empilhar");
     printf("\n<2> Desempilhar");
     printf("\n<3> Mostar Topo");
