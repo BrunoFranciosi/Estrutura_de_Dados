@@ -81,7 +81,7 @@ void listaPilha(tipoPilha p){
     }
 }
 
-int main(void){
+int main(){
     int opcao;
 
     criaPilha(&PILHA);
@@ -94,4 +94,6 @@ int main(void){
         opcao = menuOpcao();
         trataOpcao(opcao);
     }while(opcao != 5);
+
+    return 0;
 }
