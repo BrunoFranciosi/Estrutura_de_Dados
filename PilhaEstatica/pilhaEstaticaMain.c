@@ -18,7 +18,7 @@ int menuOpcao(){
     printf("\n\nMENU DE OPCOES");
     printf("\n<1> Empilhar");
     printf("\n<2> Desempilhar");
-    printf("\n<3> Mostar Topo");
+    printf("\n<3> Mostrar Topo");
     printf("\n<4> Listar Pilha");
     printf("\n<5> Sair");
     printf("\n\nSelecione uma opcao: ");
