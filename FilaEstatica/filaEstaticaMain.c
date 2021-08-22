@@ -37,7 +37,7 @@ void trataOpcao(int op){
                 printf("\nFila Cheia! Dado nao inserido!\n");
             else{
                 printf("\nDigite o dado a ser enfileirado > ");
-                scanf("%d",&dado);
+                scanf("%d", &dado);
                 inserir(&FILA, dado);
             }
             break;
@@ -45,8 +45,8 @@ void trataOpcao(int op){
             if (filaVazia(FILA))
                 printf("\nFila Vazia! Dado nao removido!\n");
             else{
-                remover(&FILA,&dado);
-                printf("\nDado Desenfileirado: %d",dado);
+                remover(&FILA, &dado);
+                printf("\nDado Desenfileirado: %d", dado);
             }
             break;
         case 3:
@@ -55,7 +55,7 @@ void trataOpcao(int op){
             else
                 primeiroFila(FILA, &dado);
 
-            printf("\nPrimeiro: %d",dado);
+            printf("\nPrimeiro: %d", dado);
             break;
         case 4:
             listaFila(&FILA);
@@ -69,20 +69,19 @@ void listaFila(tipoFila *f){
     tipoFila aux;
     criaFila(&aux);
 
-    for(int i=0; i<size; i++){
+    for(int i = 0; i < size; i++){
         remover(f, &dado);
         inserir(&aux, dado);
     }
 
     printf("\n");
 
-    for(int i=0; i<size; i++){
-        remover(&aux,&dado);
+    for(int i = 0; i < size; i++){
+        remover(&aux, &dado);
         printf("%d ", dado);
         inserir(f, dado);
     }
     printf("\n");
-
 }
 
 int main(){
