@@ -52,10 +52,10 @@ void trataOpcao(int op){
         case 3:
             if (filaVazia(FILA))
                 printf("\nFila Vazia!\n");
-            else
+            else{
                 primeiroFila(FILA, &dado);
-
-            printf("\nPrimeiro: %d", dado);
+                printf("\nPrimeiro: %d", dado);
+            }
             break;
         case 4:
             listaFila(&FILA);
