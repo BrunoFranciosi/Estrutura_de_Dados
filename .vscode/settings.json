@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "pilhaestatica.h": "c"
+        "pilhaestatica.h": "c",
+        "listadinamicaencadeadaordenada.h": "c"
     }
 }
